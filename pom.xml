@@ -10,15 +10,24 @@
   <packaging>war</packaging>
 
   <build>
-    <finalName>4glapp</finalName>
-    <plugins>
-      <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.3.2</version>
-        <configuration>
-          <failOnMissingWebXml>false</failOnMissingWebXml>
-        </configuration>
-      </plugin>
-    </plugins>
+   <finalName>4glapp</finalName>
+  <plugins>
+    <plugin>
+      <artifactId>maven-war-plugin</artifactId>
+      <version>3.3.2</version>
+      <configuration>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        <webResources>
+          <resource>
+            <directory>src/main/webapp</directory> <!-- 이 경로 확인 필요 -->
+            <targetPath>/</targetPath>
+            <includes>
+              <include>**/*.*</include>
+            </includes>
+          </resource>
+        </webResources>
+      </configuration>
+    </plugin>
+  </plugins>
   </build>
 </project>
