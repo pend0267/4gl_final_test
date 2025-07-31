@@ -6,10 +6,4 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 
 # .war 복사
 COPY target/*.war /usr/local/tomcat/webapps/tomcat/*.war
-~
-~
-~
-~
-~
-~
 
