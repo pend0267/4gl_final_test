@@ -2,7 +2,7 @@
 FROM tomcat:9.0
 
 # 기존 앱 제거 (선택)
-RUN rm -rf /usr/local/tomcat/webapps/*
+RUN rm -rf /usr/local/tomcat/webapps/tomcat/*
 
 # .war 복사
 COPY 4glapp.war /usr/local/tomcat/webapps/tomcat.war
